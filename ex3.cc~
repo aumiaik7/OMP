@@ -1,6 +1,6 @@
 #include <omp.h>
 #include <iostream>
-#define N 1000
+#define N 100
 
 
 using namespace std;
@@ -26,12 +26,17 @@ using namespace std;
 
      #pragma omp section
      for (i=0; i < N; i++)
-      {
- c[i] = a[i] + b[i];
+     {
+	c[i] = a[i] + b[i];
+	cout<<"Section1: c[i]: "<<c[i]<<endl;
+     }
 
      #pragma omp section
      for (i=0; i < N; i++)
-       d[i] = a[i] * b[i];
+     {
+	d[i] = a[i] * b[i];
+	cout<<"Section2: "<<d[i]<<endl;
+     }
 
      }  /* end of sections */
 

@@ -1,6 +1,6 @@
 #include <omp.h>
 #include <iostream>
-#define N 1000
+#define N 100
 
 
 using namespace std;
@@ -35,7 +35,7 @@ using namespace std;
      for (i=0; i < N; i++)
      {
 	d[i] = a[i] * b[i];
-	cout<<"Section2: "<<d[i]<<endl;
+	cout<<"Section2: "<<i<<" "<<d[i]<<endl;
      }
 
      }  /* end of sections */
